@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import time
 
 # Original dimensions and new dimensions
 original_width = 61
@@ -79,7 +80,8 @@ def draw_badminton_field_and_position(target_P, predict_P, shot_indices):
         )  # Predicted B
 
     # ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.02), ncol=2)
-
+    # save figure into data folder, filename is current time(user friendly)
+    plt.savefig(f"data/{time.strftime('%Y-%m-%d-%H-%M-%S')}.png")
     plt.show()
 
 
